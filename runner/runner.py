@@ -9,13 +9,13 @@ site.addsitedir(os.path.join(os.path.dirname(__file__), '..'))
 from lib.markup import get_markup, create_recommendation_blocks
 
 dataset=[
-    # {'url':'https://www.10best.com/destinations/netherlands/amsterdam/nightlife/brew-pubs/'},
-    # {'url':'https://www.dreambigtravelfarblog.com/blog/venice-on-a-budget'},
-    # {'url':'https://www.chasingthedonkey.com/dos-and-donts-of-visiting-turkey-travel-blog/'},
-    # {'url':'https://www.thepoortraveler.net/2017/06/singapore-travel-guide/'},
-    # {'url':'https://www.heatheronhertravels.com/waterfalls-volcanoes-and-hiking-in-st-lucia/'},
-    # {'url':'https://agirlandherpassport.com/tips-for-driving-in-montenegro/'},
-    # {'url':'https://www.aluxurytravelblog.com/2023/05/11/unique-authentic-experiences-india-holiday/'},
+    {'url':'https://www.10best.com/destinations/netherlands/amsterdam/nightlife/brew-pubs/'},
+    {'url':'https://www.dreambigtravelfarblog.com/blog/venice-on-a-budget'},
+    {'url':'https://www.chasingthedonkey.com/dos-and-donts-of-visiting-turkey-travel-blog/'},
+    {'url':'https://www.thepoortraveler.net/2017/06/singapore-travel-guide/'},
+    {'url':'https://www.heatheronhertravels.com/waterfalls-volcanoes-and-hiking-in-st-lucia/'},
+    {'url':'https://agirlandherpassport.com/tips-for-driving-in-montenegro/'},
+    {'url':'https://www.aluxurytravelblog.com/2023/05/11/unique-authentic-experiences-india-holiday/'},
     {'url':'https://www.chasingthedonkey.com/things-to-do-in-santorini-with-kids-and-families/'},
     {'url':'https://mexicocassie.com/museums-merida/'},
     {'url':'https://solopassport.com/6-day-trips-from-sydney-by-train/'},
@@ -53,6 +53,7 @@ for page in dataset:
     else:
         result['markup'] = 'Failed'
         result['blocks'] = 'Failed'
+    results.append(result)
 
 for result in results:
     print(result)

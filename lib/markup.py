@@ -209,16 +209,18 @@ def create_text_block(block, meta_location_data):
                              ,block[1]['vertical'],block[1]['program']
                              ,block[2]['vertical'],block[2]['program']
                             )
+    try:
+        completion = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "user", "content": request}
+        ]
+        )
 
-    completion = openai.ChatCompletion.create(
-      model="gpt-3.5-turbo",
-      messages=[
-        {"role": "user", "content": request}
-      ]
-    )
-
-    result = completion.choices[0].message['content']
-    result = json.loads(result)
+        result = completion.choices[0].message['content']
+        result = json.loads(result)
+    except:
+        result = ''
 
     return result
 
