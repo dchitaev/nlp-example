@@ -21,5 +21,5 @@ The result should look like this:
 * The target for the CTA (what should we look for at the travel brand's site, like the hotel name of insurance for traveling in SEA)
 
 # Launching
-* Add OpenAI key to runner.py
-* Laucn runner to get results
+1. Add OpenAI key to markup.py
+2. Laucn runner.py to get results
